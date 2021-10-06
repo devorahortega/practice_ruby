@@ -40,3 +40,5 @@ p item2
 p item3
 item3.price = 1612.00
 puts item3.price
+puts item1.name
+puts item2.color
