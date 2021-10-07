@@ -44,8 +44,8 @@ class Manager < Employee
 
   def fire_all_employees
     index = 0
-    while index < @employees.length
-      @employees[index][:active] = false
+    while index < :employees.length
+      :employees[index][:active.to_s.to_i] = false.to_s
       index = index + 1
     end
     puts "All employees fired!"
