@@ -35,21 +35,25 @@ class Manager < Employee
     puts "Email sent!"
   end
 
-  def give_all_raises < give_annual_raise
-    employees = employees.give_annual_raise
-  end
+  #def give_all_raises
+  # index = 0
+  #while index < @employees.length
+  # @employees[index][:salary] = @employees[index][:salary].give_annual_raise
+  #end
+  #end
 
   def fire_all_employees
     index = 0
-    while index < employees.length
-      employees[index][:active] = false 
+    while index < @employees.length
+      @employees[index][:active] = false
       index = index + 1
     end
-  end 
+    puts "All employees fired!"
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
-puts manager.give_all_raises
+#puts manager.give_all_raises
 puts manager.fire_all_employees
