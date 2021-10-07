@@ -40,7 +40,11 @@ class Manager < Employee
   end
 
   def fire_all_employees
-    
+    index = 0
+    while index < employees.length
+      employees[index][:active] = false 
+      index = index + 1
+    end
   end 
 end
 
@@ -48,3 +52,4 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 manager.print_info
 manager.send_report
 puts manager.give_all_raises
+puts manager.fire_all_employees
