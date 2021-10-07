@@ -39,7 +39,11 @@ car = Car.new
 p bike
 p bike.accelerate
 p bike.brake
+p bike.turn("West")
+p bike
 
 p car
 p car.accelerate
 p car.brake
+p car.turn("South")
+p car
