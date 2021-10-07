@@ -35,20 +35,18 @@ class Manager < Employee
     puts "Email sent!"
   end
 
-  #def give_all_raises
-  # index = 0
-  #while index < @employees.length
-  # @employees[index][:salary] = @employees[index][:salary].give_annual_raise
-  #end
-  #end
+  def give_all_raises
+    puts "Give all employees raises!"
+    @employees.each do |employee|
+      employee.give_annual_raise
+    end
+  end
 
   def fire_all_employees
-    index = 0
-    while index < :employees.length
-      :employees[index][:active.to_s.to_i] = false.to_s
-      index = index + 1
-    end
     puts "All employees fired!"
+    @employees.each do |employee|
+      employee.active = false
+    end
   end
 end
 
@@ -57,3 +55,7 @@ manager.print_info
 manager.send_report
 #puts manager.give_all_raises
 puts manager.fire_all_employees
+p employee1.print_info
+p employee2.print_info
+p employee1.active
+p employee2.active
